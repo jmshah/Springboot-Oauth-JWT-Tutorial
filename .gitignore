@@ -1,0 +1,112 @@
+# ===================================================================
+# Git Ignore for Spring Boot Inventory Management Service
+# ===================================================================
+
+# -------------------------------------------------------------------
+# SENSITIVE FILES - NEVER COMMIT THESE TO GITHUB
+# -------------------------------------------------------------------
+
+# SSL Keystore - contains private key for HTTPS
+# If committed, anyone can impersonate your server
+ssl/keystore.p12
+src/main/resources/keystore.p12
+
+# Application secrets and local overrides
+# Use environment variables or external config for production secrets
+application-local.properties
+application-prod.properties
+*.secret
+*.key
+
+# -------------------------------------------------------------------
+# Build Outputs
+# -------------------------------------------------------------------
+build/
+out/
+target/
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# -------------------------------------------------------------------
+# IDE Files
+# -------------------------------------------------------------------
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# -------------------------------------------------------------------
+# Logs and Runtime Data
+# -------------------------------------------------------------------
+*.log
+logs/
+hs_err_pid*
+replay.log
+
+# -------------------------------------------------------------------
+# OS Files
+# -------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# -------------------------------------------------------------------
+# Test and Coverage Reports
+# -------------------------------------------------------------------
+test-results/
+test-reports/
+coverage/
+jacoco/
+
+# -------------------------------------------------------------------
+# Environment and Config Overrides
+# -------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.bak
+*.swp
+*.swo
+*~
+
+# -------------------------------------------------------------------
+# Database Files (if using file-based DB)
+# -------------------------------------------------------------------
+*.db
+*.h2.db
+*.trace.db
